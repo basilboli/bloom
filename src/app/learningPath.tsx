@@ -9,7 +9,7 @@ export const LearningPath = () => {
             icon: <Flower className="w-8 h-8" />,
             description: "Plant the seeds of basic vocabulary",
             unlocked: true,
-            completed: true
+            completed: false
         },
         {
             id: 2,
