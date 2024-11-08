@@ -1,9 +1,11 @@
-// src/components/WordSprout.js
+// src/app/learning-path/word-sprout/page.tsx
 "use client"; // This enables client-side rendering for this component
-import { useState } from 'react';
-import { spanishWords } from '@/data/spanishWords'; // Corrected path for data
-import './WordSprout.css'; // We'll add some custom CSS for the flip animation
 
+import { useState } from 'react';
+import { spanishWords } from '../../../data/spanishWords'; // Adjust the path as needed
+import './WordSprout.css'; // Import CSS for styling
+
+// Define the type for a Spanish word entry
 const WordSprout = () => {
     return (
         <div className="word-sprout-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
@@ -14,8 +16,14 @@ const WordSprout = () => {
     );
 };
 
-// Flipping Card Component
-const FlippingCard = ({ spanish, english }) => {
+// Define the props type for FlippingCard
+interface FlippingCardProps {
+    spanish: string;
+    english: string;
+}
+
+// Flipping Card Component with typed props
+const FlippingCard: React.FC<FlippingCardProps> = ({ spanish, english }) => {
     const [flipped, setFlipped] = useState(false);
 
     const handleFlip = () => setFlipped(!flipped);
