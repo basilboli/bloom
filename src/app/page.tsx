@@ -40,7 +40,7 @@ export default function Home() {
         {/* Learning Path Section */}
         <div className="mt-32">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Your Blooming Journey
+            Your Learning Plan
           </h2>
           <LearningPath />
         </div>
